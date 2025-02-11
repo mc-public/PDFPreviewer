@@ -1,0 +1,15 @@
+{
+  "originHash" : "79748e651a7787449ecb5cd07465a9344959ad021359f1cbb7b2f7392dd2a772",
+  "pins" : [
+    {
+      "identity" : "fpsmonitorlabel",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/12345CPZ/FPSMonitorLabel",
+      "state" : {
+        "branch" : "main",
+        "revision" : "aa240522910c58c4732347369b89d4c6955b1439"
+      }
+    }
+  ],
+  "version" : 3
+}
