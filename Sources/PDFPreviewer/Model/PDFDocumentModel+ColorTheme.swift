@@ -17,7 +17,7 @@ extension UIColor {
 extension PDFDocumentModel {
     
     /// Struct representing the page border style in the current document.
-    public struct PageBorder: Sendable, Equatable {
+    public struct PageBorder: Sendable, Equatable, Hashable {
         /// Show page shadow for the current page.
         ///
         /// When this value is `true`, only the shadow will be displayed, and the border will not be shown.
@@ -45,11 +45,13 @@ extension PDFDocumentModel {
         public static let `default` = Self()
         /// A border that automatically switch between black or white based on the current environment.
         public static let dynamicBlack = Self(borderColor: .dynamicBlack, borderWidth: 1)
+        /// All built-in PDF borders.
+        static var allBuildBorders: [Self] { [.default, .dynamicBlack] }
 
     }
     
     /// Struct for representing colors displayed on a page.
-    public struct DocumentColor: Sendable, CaseIterable {
+    public struct DocumentColor: Sendable, Hashable {
         /// The background color of the page view.
         public var pageBackgroundColor: UIColor
         /// The page border of the document view.
@@ -74,7 +76,8 @@ extension PDFDocumentModel {
         private static let darkPage = UIColor.black
         private static let darkBackground = UIColor(red: 0.1, green: 0.1, blue: 0.1, alpha: 1.0)
         
-        public static var allCases: [DocumentColor] {
+        /// All built-in themes.
+        public static var allBuildThemes: [DocumentColor] {
             [.default, .lightDaytime, .lightEyeProtection, .lightParchment]
         }
         
@@ -92,7 +95,7 @@ extension PDFDocumentModel {
 extension PDFDocumentModel {
     
     /// The page overlay view about current PDF document.
-    public final class PageOverlayView: UIView {
+    final class PageOverlayView: UIView {
         typealias DocumentColor = PDFDocumentModel.DocumentColor
         private var documentColor: DocumentColor?
         

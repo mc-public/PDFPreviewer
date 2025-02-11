@@ -14,11 +14,7 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "PDFPreviewer",
-            swiftSettings: [
-//                .unsafeFlags(["-strict-concurrency=complete"]
-//                            )
-            ]
+            name: "PDFPreviewer"
         )
     ],
     swiftLanguageModes: [.v6]

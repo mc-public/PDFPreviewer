@@ -42,7 +42,10 @@ open class PDFPreviewerModel: ObservableObject {
     ///
     /// The default value is `nil`. Setting it will change the default interaction behavior of the view, such as context menus and double-tap behavior.
     public final var interactionDelegate: (any InteractionDelegate)? {
-        didSet { self.constraintView.updateTapGesture() }
+        didSet {
+            self.constraintView.updateTapGesture()
+            updateView()
+        }
     }
     /// The display trim level about current previewer.
     ///
@@ -52,7 +55,7 @@ open class PDFPreviewerModel: ObservableObject {
     }
     /// Toggle the rendering colors of the page in night mode.
     ///
-    /// Default value is `true`. The system-default page rendering color in night mode is `white`. After configuring this value to `true`, the page rendering color will automatically be changed to black.
+    /// Default value is `true`. The system-default page rendering color in night mode is `white`. After configuring this value to `true`, the page rendering color will automatically be changed to `.black`.
     @Published public final var invertRenderingColor = true {
         didSet { self.document?.invertRenderingColor = self.invertRenderingColor }
     }

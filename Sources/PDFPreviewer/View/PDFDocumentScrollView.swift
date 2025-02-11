@@ -83,9 +83,6 @@ open class PDFDocumentScrollView: PDFView {
     /// The default value is `nil`. This value being `nil` means that the default double-tap zoom gesture is used.
     public var doubleTapAction: ((PDFDocumentTapPosition) -> ())? = nil {
         didSet {
-//            if self.internalUsingSwiftUI {
-//                fatalError("[\(Self.self)][\(#function)] Customizing double tap gesture is not supported in SwiftUI.")
-//            }
             if let doubleTapGesture {
                 self.removeGestureRecognizer(doubleTapGesture)
             }
@@ -100,6 +97,8 @@ open class PDFDocumentScrollView: PDFView {
             }
         }
     }
+    
+    var preventDefaultMenu: Bool = true
     
     /// Lock the current view's zoom state to automatic zoom state.
     ///

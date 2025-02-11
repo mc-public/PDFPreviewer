@@ -27,7 +27,7 @@ extension PDFPreviewerModel {
     /// The method called when the user long-presses on a point within the view on the page.
     ///
     /// - Parameter documentPosition: The point on the page the user clicked and the point in the PDF page coordinate system.
-    @objc optional func showMenu(at documentPosition: PDFPreviewerModel.DocumentPosition) -> UIMenu
+    //@objc optional func showMenu(at documentPosition: PDFPreviewerModel.DocumentPosition) -> UIMenu
 }
 
 #endif
