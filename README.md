@@ -18,9 +18,8 @@
 
 After downloading the package resources, open the test project to quickly test all the features provided by this framework. The following are two screenshots that demonstrate some of the features supported by the framework.
 
-![Green Background](Images/green.png)
-
-![Inverted Background](Images/green.png)
+<img src="Images/green.png" width=50% height=50%>
+<img src="Images/black.png" width=50% height=50%>
 
 ## Usage
 
