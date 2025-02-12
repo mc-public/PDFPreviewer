@@ -5,12 +5,12 @@
 //  Created by 孟超 on 2024/10/16.
 //
 
-#if canImport(UIKit)
+#if os(iOS)
 import UIKit
 import SwiftUI
 import PDFKit
 
-@MainActor
+@MainActor @available(iOS 16.0, *)
 class PDFDocumentConstraintView: UIView {
     
     private let documentView: PDFDocumentScrollView

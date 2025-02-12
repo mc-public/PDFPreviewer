@@ -5,7 +5,7 @@
 //  Created by 孟超 on 2024/10/8.
 //
 
-#if canImport(UIKit)
+#if os(iOS)
 import UIKit
 
 @available(iOS 16.0, *)

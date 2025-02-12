@@ -6,6 +6,7 @@
 //
 
 import CoreGraphics
+#if canImport(PDFKit) && canImport(UIKit)
 import PDFKit
 
 /// A structure representing various margins and rotation angle of a specific PDF page.
@@ -76,3 +77,4 @@ public struct PDFPageBounds: Sendable {
         return (self.rotation == .clockwise90 || self.rotation == .clockwise270) ? .init(width: size.height, height: size.width) : size
     }
 }
+#endif

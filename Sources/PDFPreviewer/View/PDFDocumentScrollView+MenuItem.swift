@@ -5,7 +5,7 @@
 //  Created by 孟超 on 2024/10/15.
 //
 
-#if canImport(UIKit)
+#if os(iOS)
 import UIKit
 /// Custom menu items when selecting in a `PDFDocumentScrollView`.
 ///

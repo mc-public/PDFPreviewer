@@ -5,7 +5,7 @@
 //  Created by 孟超 on 2024/9/16.
 //
 
-#if canImport(UIKit)
+#if os(iOS)
 
 import UIKit
 

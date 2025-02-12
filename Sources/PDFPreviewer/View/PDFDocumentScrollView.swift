@@ -5,10 +5,8 @@
 //  Created by 孟超 on 2024/10/7.
 //
 
+#if os(iOS)
 import PDFKit
-
-#if canImport(UIKit)
-
 /// View for displaying PDF document pages.
 ///
 /// This view is essentially a subclass of `PDFView`.

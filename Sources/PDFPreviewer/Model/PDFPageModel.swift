@@ -4,7 +4,7 @@
 //
 //  Created by 孟超 on 2024/9/16.
 //
-#if canImport(UIKit)
+#if os(iOS)
 import UIKit
 import Foundation
 import PDFKit
@@ -135,7 +135,7 @@ public final class PDFPageModel: PDFPage {
     }
     
     
-#if os(iOS)
+#if canImport(UIKit)
     
     /// Get a thumbnail of the specified size
     ///

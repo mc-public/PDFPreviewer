@@ -7,7 +7,7 @@
 
 import CoreGraphics
 
-#if canImport(UIKit)
+#if os(iOS)
 import UIKit
 
 extension PDFDocumentModel {
