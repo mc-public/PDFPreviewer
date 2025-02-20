@@ -9,9 +9,13 @@
 import UIKit
 import PDFKit
 
+
+
 extension UIView {
     @AtomicValue(.NSLock, defaultValue: false)
     private static var CanResignKeyboard: Bool
+    
+    /*
     
     /// Returns a Boolean value indicating whether the responder is willing to relinquish first-responder status.
     ///
@@ -19,6 +23,7 @@ extension UIView {
     ///
     /// This method returns `true` by default. You can override this method in your custom responders and return a different value if needed. For example, a text field containing invalid content might want to return false to ensure that the user corrects that content first.
     override open var canResignFirstResponder: Bool {
+        //
         if (self.superview?.superview as? PDFDocumentScrollView)?.internalUsingSwiftUI == true {
             if !Self.CanResignKeyboard {
                 return true
@@ -42,6 +47,8 @@ extension UIView {
         }
         return false
     }
+     
+     */
     
     /// Prevent all `UIView`s to resign first responder.
     static func PreventResignFirstResponder() {
